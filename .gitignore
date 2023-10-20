@@ -1,0 +1,10 @@
+/*
+!.gitignore
+
+!nvim/
+nvim/lazy-lock.json
+!fish/
+!autostart/
+!chromium-flags.conf
+!starship.toml
+!code.flags

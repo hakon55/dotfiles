@@ -2,3 +2,7 @@
 	path = nvim
 	url = git@github.com:hakon55/neovim.git
 	branch = main
+[submodule "nvim2"]
+	path = nvim2
+	url = git@github.com:hakon55/neovim.git
+	branch = main

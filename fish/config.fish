@@ -8,6 +8,8 @@ abbr --add fishconfig nvim ~/.config/fish/config.fish
 abbr --add nvimconfig nvim ~/.config/nvim/init.lua
 abbr --add remove-swap-neovim rm -rf ~/.local/state/nvim/swap/
 
+abbr --add yay paru
+
 abbr --add config ~/.config/
 abbr --add applications ~/.local/state/applications
 abbr --add drivers "lspci -k | grep -A 2 -E \"(VGA|3D)\""

@@ -2,8 +2,6 @@
 !.gitignore
 
 !nvim/
-!nvim*
-!nvim2/
 nvim/lazy-lock.json
 !fish/
 !autostart/

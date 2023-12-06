@@ -19,5 +19,4 @@ abbr --add drivers "lspci -k | grep -A 2 -E \"(VGA|3D)\""
 # set -x NEOVIDE_MAXIMIZED true
 # set -x NEOVIDE_FRAME none
 
-nvm use latest -s
 starship init fish | source

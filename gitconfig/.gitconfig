@@ -1,0 +1,7 @@
+[user]
+	name = Håkon Størdal
+	email = 30749741+hakon55@users.noreply.github.com
+[init]
+	defaultBranch = main
+[core]
+	editor = helix

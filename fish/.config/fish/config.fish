@@ -14,6 +14,8 @@ abbr --add drivers "lspci -k | grep -A 2 -E \"(VGA|3D)\""
 abbr --add dotfiles chezmoi
 abbr --add hx helix
 
+set -x EDITOR helix
+
 # NeoVide env-variables
 # set -x NEOVIDE_MULTIGRID true
 # set -x NEOVIDE_MAXIMIZED true

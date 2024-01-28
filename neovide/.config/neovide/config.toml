@@ -1,0 +1,10 @@
+# frame = "None"
+# neovim_bin = "/home/hakon/.local/bin/lvim"
+wsl = false
+multigrid = true
+vsync = false
+maximized = true
+srgb = true
+idle = true
+neovim_bin = "/usr/bin/nvim"
+frame = "none"

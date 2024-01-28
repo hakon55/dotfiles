@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=The Legend of Zelda: Tears of the Kingdom
+Comment=Start The Legend of Zelda: Tears of the Kingdom with the yuzu Emulator
+Icon=/home/hakon/.var/app/net.lutris.Lutris/data/icons/hicolor/256x256/yuzu-0100F2C0115B6000.png
+TryExec=./bin/yuzu
+Exec=./bin/yuzu -g "/home/hakon/Games/Zelda TOTK/The Legend of Zelda Tears of the Kingdom [0100f2c0115b6000] [v0] [Nxbrew.com].nsp"
+Categories=Game;Emulator;Qt;
+Keywords=Switch;Nintendo;

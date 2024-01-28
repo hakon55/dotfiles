@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Proton Pass Web App
+Exec=flatpak 'run' '--command=/app/bin/chromium' 'org.chromium.Chromium' '--profile-directory=Default' '--app-id=hkhckfoofhljcngmlnlojcbplgkcpcab'
+Icon=/home/hakon/.local/share/icons/hicolor/512x512/apps/chrome-hkhckfoofhljcngmlnlojcbplgkcpcab-Default.png
+StartupWMClass=chrome-hkhckfoofhljcngmlnlojcbplgkcpcab-Default
+X-Flatpak-Part-Of=org.chromium.Chromium
+TryExec=/var/lib/flatpak/exports/bin/org.chromium.Chromium

@@ -22,3 +22,7 @@ set -x EDITOR helix
 # set -x NEOVIDE_FRAME none
 
 starship init fish | source
+
+if status is-interactive
+    eval (zellij setup --generate-auto-start fish | string collect)
+end

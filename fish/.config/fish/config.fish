@@ -15,7 +15,8 @@ abbr --add dotfiles chezmoi
 abbr --add hx helix
 
 set -x EDITOR helix
-
+set -x ZELLIJ_AUTO_ATTACH true
+set -x ZELLIJ_AUTO_EXIT false
 # NeoVide env-variables
 # set -x NEOVIDE_MULTIGRID true
 # set -x NEOVIDE_MAXIMIZED true

@@ -22,6 +22,8 @@ set -x ZELLIJ_AUTO_EXIT false
 # set -x NEOVIDE_MAXIMIZED true
 # set -x NEOVIDE_FRAME none
 
+# zoxide init fish | source
+
 starship init fish | source
 
 if status is-interactive

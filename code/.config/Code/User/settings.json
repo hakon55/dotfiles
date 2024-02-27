@@ -1,0 +1,100 @@
+{
+  // VS Code
+  "telemetry.telemetryLevel": "crash",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveWhenNoErrors": true,
+  "window.titleBarStyle": "custom",
+  "workbench.list.smoothScrolling": true,
+  "settingsSync.keybindingsPerPlatform": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "keyboard.dispatch": "keyCode",
+  // Editor
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.fontSize": 15,
+  "editor.smoothScrolling": true,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'FiraCode Nerd Font','FiraCode Nerd Font Mono', 'Droid Sans Mono', 'monospace'",
+  "editor.lineNumbers": "relative",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always",
+    "source.fixAll": "always"
+  },
+  "editor.minimap.enabled": false,
+  "editor.wordWrap": "on",
+  "diffEditor.codeLens": true,
+  "editor.cursorSurroundingLines": 8,
+  "json.format.keepLines": true,
+  // SSH
+  "remote.SSH.connectTimeout": 60,
+  "remote.SSH.useLocalServer": false,
+  "remote.SSH.remotePlatform": {
+    "aura.home": "linux",
+    "kosebula.home": "linux",
+    "192.168.0.66": "linux"
+  },
+  // Continue
+  "continue.enableTabAutocomplete": true,
+  "continue.telemetryEnabled": false,
+  // Frontend
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Vim && Helix
+  "vim.leader": " ",
+  "extensions.experimental.affinity": {
+    "jasew.vscode-helix-emulation": 1,
+    "vscodevim.vim": 1
+  },
+  "vim.useCtrlKeys": false,
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-u>": true,
+    "<C-i>": true,
+    "<C-o>": true,
+    "<C-w>": true,
+  },
+  "vim.showMarksInGutter": true,
+  "vim.sneak": true,
+  "vim.sneakReplacesF": true,
+  "vim.sneakUseIgnorecaseAndSmartcase": true,
+  "vim.smartRelativeLine": true,
+  "vim.highlightedyank.enable": true,
+  "vim.visualstar": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": [ "L" ], "after": [ "$" ] },
+    { "before": [ "H" ], "after": [ "^" ] },
+    { "before": [ "U" ], "after": [ "Ctrl+R" ] },
+    { "before": [ ":" ], "commands": [ "workbench.action.showCommands" ], "silent": true },
+    { "before": [ "M" ], "commands": [ ":delmarks!" ] },
+    { "before": [ "<leader>", "c" ], "commands": [ "editor.action.commentLine" ] },
+    { "before": [ "<leader>", "y" ], "after": [ "\"", "+", "y" ] },
+    { "before": [ "<leader>", "p" ], "after": [ "\"", "+", "p" ] },
+    { "before": [ "<leader>", "P" ], "after": [ "\"", "+", "P" ] },
+    // VIM unimpaired, men veldig barebone. Kan fikses
+    { "before": [ "]" ], "commands": [ "editor.action.marker.nextInFiles" ] },
+    { "before": [ "[" ], "commands": [ "editor.action.marker.prevInFiles" ] },
+    // Ikke klart å bestemme meg for denne så har begge
+    { "before": [ "K" ], "commands": [ "editor.action.showDefinitionPreviewHover" ] },
+    { "before": [ "leader", "k" ], "commands": [ "editor.action.showDefinitionPreviewHover" ] },
+  ],
+  "vim.operatorPendingModeKeyBindings": [
+    { "before": [ "L" ], "after": [ "$" ] },
+    { "before": [ "H" ], "after": [ "^" ] }
+  ],
+  "vim.visualModeKeyBindings": [
+    { "before": [ "leader", "c" ], "commands": [ "editor.action.commentLine" ] },
+    { "before": [ "<leader>", "y" ], "after": [ "\"", "+", "y" ] },
+    { "before": [ "L" ], "after": [ "$" ] },
+    { "before": [ "H" ], "after": [ "^" ] }
+  ],
+}

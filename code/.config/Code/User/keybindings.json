@@ -1,0 +1,80 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    // Tanken bak keybindings. 
+    // Ting som blir gjort av editor og ting som gjemmer seg bak modifisers (shift, ctrl, alt) osv. skal helst havne her. andre VIM ting blir hos VIM. Om man "opter ut" av VIM, så skal defaults komme til. 
+    // Leader keybindings må dessverre ligge i settings.json under egne VIM remappings
+    // Ctrl+Shift forblir vs-code - så den brukes ikke til VIM ting
+    // Mest mulig forblir keybindings etter Helix og Vim
+    {
+        "key": "alt+shift+c",
+        "command": "editor.action.insertCursorAbove",
+        "when": "inputFocus && vim.active&& vim.mode == 'Normal'",
+    },
+    {
+        "key": "shift+c",
+        "command": "editor.action.insertCursorBelow",
+        "when": "inputFocus && vim.active&& vim.mode == 'Normal'",
+    },
+    {
+        "key": "alt+j",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "inputFocus && vim.active&& vim.mode != 'Insert'"
+    },
+    {
+        "key": "alt+k",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "inputFocus && vim.active&& vim.mode != 'Insert'"
+    },
+    {
+        "key": "alt+o",
+        "command": "editor.action.smartSelect.expand",
+        "when": "inputFocus && vim.active&& vim.mode != 'Insert'"
+    },
+    {
+        "key": "alt+i",
+        "command": "editor.action.smartSelect.shrink",
+        "when": "inputFocus && vim.active && vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "inputFocus && vim.active && vim.active && vim.mode != 'Insert'",
+    },
+    // Liker ikke denne, så kan fjernes
+    // {
+    //     "key": "ctrl+shift+n",
+    //     "command": "editor.action.addSelectionToPreviousFindMatch",
+    //     "when": "inputFocus && vim.active && vim.mode != 'Insert'",
+    // },
+    // VS-Code med litt VIM krydder
+    {
+        "key": "ctrl+j",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+    // VS code 
+    {
+        "key": "ctrl+shift+c",
+        "command": "workbench.view.extension.continue"
+    },
+    {
+        "key": "ctrl+shift+7",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+]

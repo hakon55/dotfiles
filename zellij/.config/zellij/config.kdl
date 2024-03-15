@@ -171,7 +171,7 @@ keybinds {
         bind "Ctrl n" { SwitchToMode "Resize"; }
     }
     shared_except "scroll" "locked" {
-        unbind "Ctrl s" { SwitchToMode "Scroll"; }
+        bind "Ctrl s" { SwitchToMode "Scroll"; }
     }
     shared_except "session" "locked" {
         bind "Ctrl o" { SwitchToMode "Session"; }
@@ -301,7 +301,7 @@ default_layout "default"
 //   - true (default)
 //   - false
 //
-// mouse_mode false
+mouse_mode false
 
 // Configure the scroll back buffer size
 // This is the number of lines zellij stores for each pane in the scroll back
@@ -318,7 +318,7 @@ default_layout "default"
 // Examples:
 //
 // copy_command "xclip -selection clipboard" // x11
-copy_command "wl-copy"                    // wayland
+// copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
 
 // Choose the destination for copied text
@@ -333,7 +333,7 @@ copy_command "wl-copy"                    // wayland
 // Enable or disable automatic copy (and clear) of selection when releasing mouse
 // Default: true
 //
-// copy_on_select false
+copy_on_select false
 
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL

@@ -16,7 +16,7 @@ abbr --add hx helix
 
 set -x EDITOR helix
 set -x ZELLIJ_AUTO_ATTACH true
-set -x ZELLIJ_AUTO_EXIT false
+# set -x ZELLIJ_AUTO_EXIT true
 # NeoVide env-variables
 # set -x NEOVIDE_MULTIGRID true
 # set -x NEOVIDE_MAXIMIZED true
@@ -26,6 +26,6 @@ set -x ZELLIJ_AUTO_EXIT false
 
 starship init fish | source
 
-if status is-interactive
-    eval (zellij setup --generate-auto-start fish | string collect)
-end
+# if status is-interactive
+#     eval (zellij setup --generate-auto-start fish | string collect)
+# end

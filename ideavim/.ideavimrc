@@ -1,10 +1,10 @@
 " Must be done first to tell other plugins that this is the leader key
 let mapleader=" "
-
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 " https://github.com/JetBrains/ideavim/wiki/IdeaVim-Plugins
 " set clipboard+=unnamed
 " set clipboard+=ideaput
-set multiple-cursors
+"" set multiple-cursors
 set ideajoin
 set idearefactormode=keep
 set incsearch
@@ -21,61 +21,7 @@ set which-key
 
 set timeoutlen=5000
 
-nmap <s-m-c> <Action>(EditorCloneCaretAbove)
-nmap C <Action>(EditorCloneCaretBelow)
-
-nmap <m-k> <Action>(MoveLineUp)
-nmap <m-j> <Action>(MoveLineDown)
-
-nmap <s-u> <Action>($Redo)
-
-vmap <leader>y "+y
-nmap <leader>y <Action>(CopyReferencePopupGroup)
-
-nmap <leader>p "+p
-nmap <leader>P <Action>(PasteMultiple)
-
-map <Leader><Leader> <Action>(Switcher)
-
-nmap <C-n> <Action>(SelectNextOccurrence)
-vmap <C-n> <Action>(SelectNextOccurrence)
-
-"" vmap ms S
-"" nmap ms ys
-"" nmap md ds
-"" nmap mr cs
-
-nmap M <Action>(ToggleBookmark)
-
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-nmap \e :e ~/.ideavimrc<CR>
-nmap \r <Action>(IdeaVim.ReloadVimRc.reload)
-nmap <c-z> <Action>(ToggleDistractionFreeMode)
-nmap <c-t> <Action>(ActivateTerminalToolWindow)
-nmap <leader>t <Action>(ActivateTerminalToolWindow)
-nmap <c-w>v <Action>(SplitVertically)
-nmap <c-w>s <Action>(SplitHorizontally)
-nmap <c-w>W <Action>(MoveEditorToOppositeTabGroup)
-nmap <c-w>w <Action>(NextWindow)
-nmap <leader>q <Action>(CloseContent)
-nmap <leader>Q <Action>(CloseAllEditors)
-nmap <leader>x <Action>(HideAllWindows)
-nmap <leader>o <Action>(OptimizeImports)
-nmap ]d <Action>(GotoNextError)
-nmap [d <Action>(GotoPreviousError)
-nmap ]g <Action>(VcsShowNextChangeMarker)
-nmap [g <Action>(VcsShowPrevChangeMarker)
-nmap ]m <Action>(MethodDown)
-nmap [m <Action>(MethodUp)
-nmap <leader>r <Action>(Refactorings.QuickListPopupAction)
-nmap <leader>= <Action>(ReformatCode)
-nmap <leader>j <Action>(RecentLocations)
-nmap gr <Action>(FindUsages)
-nmap gi <Action>(GotoImplementation)
-nmap gd <Action>(GotoDeclaration)
-nmap gT <Action>(GotoTest)
-nmap gp <Action>(GotoSuperMethod)
-nmap gy <Action>(GotoTypeDeclaration)
+"" Mitt eget
 nmap gh 0
 nmap gs ^
 nmap H ^
@@ -90,26 +36,72 @@ xmap L $
 xmap ge G
 omap H ^
 omap L $
+map <m-k> <Action>(MoveLineUp)
+map <m-j> <Action>(MoveLineDown)
+map <Leader><Leader> <Action>(Switcher)
+nmap <C-n> <Action>(SelectNextOccurrence)
+vmap <C-n> <Action>(SelectNextOccurrence)
+nmap <C-b> <Action>(HideAllWindows)
+
+"" Helix
+nmap <s-u> <Action>($Redo)
+nmap <m-o> <Action>(EditorSelectWord)
+vmap <m-o> <Action>(EditorSelectWord)
+nmap <m-i> <Action>(EditorUnSelectWord)
+vmap <m-i> <Action>(EditorUnSelectWord)
+nmap <c-o> <Action>(Back)
+nmap <c-i> <Action>(Forward)
+nmap <s-k> <Action>(ExpressionTypeInfo)
+
+"" Space mode
+nmap <leader>r <Action>(RenameElement)
+nmap <leader>j <Action>(RecentLocations)
+vmap <leader>y "+y
+nmap <leader>y <Action>(CopyReferencePopupGroup)
+nmap <leader>p "+p
+nmap <leader>P <Action>(PasteMultiple)
+nmap <Leader>c gcc
+vmap <Leader>c gcc
+nmap <Leader>d <Action>(ShowErrorDescription)
 nmap <leader>S <Action>(GotoSymbol)
 nmap <leader>s <Action>(FileStructurePopup)
 nmap <leader>F <Action>(FindInPath)
 nmap <leader>f <Action>(GotoFile)
-nmap <c-f> <Action>(ActivateFindToolWindow)
-"" nmap <leader>e <Action>(SearchEverywhere)
 nmap <leader>e <Action>(ActivateProjectToolWindow)
 nmap <leader>a <Action>(ShowIntentionActions)
-nmap <leader>z <Action>(ChangeIdeScale)
-nmap <leader>g <Action>(Vcs.QuickListPopupAction)
+nmap <leader>g <Action>(EditorPopupMenu.GoTo)
 nmap <leader>b <Action>(RecentChangedFiles)
 nmap <leader>B <Action>(RecentFiles)
-nmap <leader><cr> :nohlsearch<CR>
-nmap <c-o> <Action>(Back)
-nmap <c-i> <Action>(Forward)
-nmap <s-k> <Action>(ExpressionTypeInfo)
-nmap <c-k> <Action>(ShowErrorDescription)
+nmap <leader>d <Action>(ShowErrorDescription)
+nmap <leader>D <Action>(ActivateProblemsViewToolWindow)
 nmap <leader>k <Action>(QuickJavaDoc)
-nmap <leader>uh <Action>(ToggleInlayHintsGloballyAction)
-nmap <leader>uw <Action>(EditorToggleShowWhitespaces)
+nmap <leader>? <Action>(GotoAction)
+nmap <leader>/ <Action>(SearchEverywhere)
+nmap <leader>v <Action>(ChangeView)
+nmap <leader><cr> :nohlsearch<CR>
+
+"" Goto mode
+nmap gr <Action>(FindUsages)
+nmap gi <Action>(GotoImplementation)
+nmap gd <Action>(GotoDeclaration)
+nmap gp <Action>(GotoSuperMethod)
+nmap gy <Action>(GotoTypeDeclaration)
+
+"" Window mode
+nmap <c-w>v <Action>(SplitVertically)
+nmap <c-w>s <Action>(SplitHorizontally)
+nmap <c-w>W <Action>(MoveEditorToOppositeTabGroup)
+nmap <c-w>w <Action>(NextWindow)
+nmap <c-w>q <Action>(CloseContent)
+
+"" Unimpaired
+nmap ]d <Action>(GotoNextError)
+nmap [d <Action>(GotoPreviousError)
+nmap ]g <Action>(VcsShowNextChangeMarker)
+nmap [g <Action>(VcsShowPrevChangeMarker)
+nmap ]m <Action>(MethodDown)
+nmap [m <Action>(MethodUp)
+
 """ Running and Debugging
 nmap <leader>,r <Action>(ContextRun)
 nmap <leader>,c <Action>(RunClass)

@@ -1,33 +1,15 @@
 [
   {
-    "bindings": {
-      "ctrl-j": "workspace::ToggleBottomDock",
-      "ctrl-b": "workspace::ToggleLeftDock",
-      "ctrl-s": "workspace::Save"
-    }
-  },
-  {
     "context": "Workspace",
     "bindings": {
       "shift shift": "file_finder::Toggle",
-      "ctrl-shift-w": "pane::CloseActiveItem",
-      "ctrl-´": "terminal_panel::ToggleFocus"
+      "ctrl-´": "terminal_panel::ToggleFocus",
+      "ctrl-alt-¨": "workspace::NewTerminal"
     }
   },
   {
     "context": "Editor && !menu",
-    "bindings": {
-      "ctrl-a": "editor::SelectAll", // vim default: increment
-      "ctrl-r": "projects::OpenRecent", // For at ctrl-r funker i terminal
-      "ctrl-f": "buffer_search::Deploy",
-
-      "alt-j": "editor::MoveLineDown",
-      "alt-k": "editor::MoveLineUp",
-      "shift-alt-j": "editor::AddSelectionBelow",
-      "shift-alt-k": "editor::AddSelectionAbove",
-      "alt-o": "editor::SelectLargerSyntaxNode",
-      "alt-i": "editor::SelectSmallerSyntaxNode"
-    }
+    "bindings": {}
   },
   {
     "context": "Dock",
@@ -41,19 +23,13 @@
   {
     "context": "VimControl && !menu",
     "bindings": {
-      "H": ["workspace::SendKeystrokes", "^"],
-      "L": ["workspace::SendKeystrokes", "$"],
-
-      "ctrl-c": "editor::Copy",
-      "ctrl-v": "editor::Paste",
-      "ctrl-x": "editor::Cut"
-      // Put key bindings here if you want them to work in normal & visual mode.
-    }
-  },
-  {
-    "context": "vim_mode == normal && !menu",
-    "bindings": {
-      "U": "vim::Redo"
+      "U": "vim::Redo",
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
+      "shift-alt-j": "editor::AddSelectionBelow",
+      "shift-alt-k": "editor::AddSelectionAbove",
+      "alt-o": "editor::SelectLargerSyntaxNode",
+      "alt-i": "editor::SelectSmallerSyntaxNode"
     }
   },
   {

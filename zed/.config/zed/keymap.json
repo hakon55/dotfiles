@@ -29,7 +29,9 @@
       "shift-alt-j": "editor::AddSelectionBelow",
       "shift-alt-k": "editor::AddSelectionAbove",
       "alt-o": "editor::SelectLargerSyntaxNode",
-      "alt-i": "editor::SelectSmallerSyntaxNode"
+      "alt-i": "editor::SelectSmallerSyntaxNode",
+      "H": "vim::FirstNonWhitespace",
+      "L": "vim::EndOfLine"
     }
   },
   {

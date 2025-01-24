@@ -1,4 +1,5 @@
 set -g fish_greeting
+set TERM xterm-256color
 
 # fish_add_path /home/hakon/.local/bin
 fish_add_path /opt/homebrew/bin

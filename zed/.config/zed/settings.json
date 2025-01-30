@@ -7,7 +7,13 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "One Dark",
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "features": {
+    "inline_completion_provider": "copilot"
+  },
+  "theme": "Gruvbox Dark",
 
   "autosave": "on_focus_change",
   "tab_bar": { "show": false, "show_nav_history_buttons": true },
@@ -42,18 +48,20 @@
 
   "assistant": {
     "default_model": {
-      "provider": "ollama",
-      "model": "qwen2.5-coder:7b"
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
     },
     "version": "2"
   },
 
   "project_panel": {
-    "auto_fold_dirs": false
+    "auto_fold_dirs": true
   },
 
   "terminal": {
+    "dock": "bottom",
     "font_family": "FiraCode Nerd Font Mono",
+    "copy_on_select": true,
     "env": {
       "EDITOR": "zed --wait"
     }

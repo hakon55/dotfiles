@@ -26,13 +26,13 @@ L = ["goto_line_end", "normal_mode"]
 H = ["goto_line_start", "normal_mode"]
 V = ["select_mode", "extend_to_line_bounds"]
 X = "extend_line_above"
-"A-j" = [ "extend_to_line_bounds", "delete_selection", "paste_after" ]
-"A-k" = [ "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before" ]
+A-j = [ "extend_to_line_bounds", "delete_selection", "paste_after" ]
+A-k = [ "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before" ]
 
 [keys.select]
-C-c = "no_op"
+# C-c = "no_op"
 C-n = ["search_selection", "extend_search_next"]
 L = ["goto_line_end"]
 H = ["goto_line_start"]
-"A-j" = [ "extend_to_line_bounds", "delete_selection", "paste_after" ]
-"A-k" = [ "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before" ]
+A-j = [ "extend_to_line_bounds", "delete_selection", "paste_after" ]
+A-k = [ "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before" ]

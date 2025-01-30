@@ -23,25 +23,39 @@ set timeoutlen=5000
 
 "" Mitt eget
 nmap gh 0
+nmap cd <Action>(RenameElement)
 nmap gs ^
 nmap H ^
-nmap gl $
+"" nmap gl $
 nmap L $
 nmap ge G
 xmap gh 0
 xmap gs ^
 xmap H ^
-xmap gl $
+"" xmap gl $
 xmap L $
 xmap ge G
 omap H ^
 omap L $
+
 map <m-k> <Action>(MoveLineUp)
 map <m-j> <Action>(MoveLineDown)
+
+nmap <S-Esc> <Action>(HideAllWindows)
 map <Leader><Leader> <Action>(Switcher)
-nmap <C-n> <Action>(SelectNextOccurrence)
-vmap <C-n> <Action>(SelectNextOccurrence)
-nmap <C-b> <Action>(HideAllWindows)
+
+nmap gl <Action>(SelectNextOccurrence)
+vmap gl <Action>(SelectNextOccurrence)
+nmap ga <Action>(SelectAllOccurrences)
+
+nmap <C-h> <C-w>h
+nmap <C-l> <C-w>l
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+
+
+nmap <A-S-k> <Action>(EditorCloneCaretAbove)
+nmap <A-S-j> <Action>(EditorCloneCaretBelow)
 
 "" Helix
 nmap <s-u> <Action>($Redo)

@@ -5,6 +5,7 @@ set TERM xterm-256color
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/opt/node@20/bin
 fish_add_path /Users/m01345/scripts
+fish_add_path /Users/m01345/bin
 
 abbr dc docker compose
 

@@ -4,6 +4,6 @@
 [init]
 	defaultBranch = main
 [core]
-	editor = helix
+	editor = nvim
 [pull]
 	rebase = true

@@ -1,4 +1,5 @@
 .nextcloudsync.log
 .sync_*
 zed/.config/zed/conversations/
+zed/.config/zed/prompts/
 

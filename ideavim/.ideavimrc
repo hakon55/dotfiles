@@ -41,17 +41,23 @@ omap L $
 map <m-k> <Action>(MoveLineUp)
 map <m-j> <Action>(MoveLineDown)
 
+sadsada
+
 nmap <S-Esc> <Action>(HideAllWindows)
 map <Leader><Leader> <Action>(Switcher)
 
 nmap gl <Action>(SelectNextOccurrence)
 vmap gl <Action>(SelectNextOccurrence)
 nmap ga <Action>(SelectAllOccurrences)
+nmap g. <Action>(ShowIntentionActions)
 
 nmap <C-h> <C-w>h
 nmap <C-l> <C-w>l
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
+
+nmap <C-w>q <Action>(CloseAllEditors)
+
 
 
 nmap <A-S-k> <Action>(EditorCloneCaretAbove)
@@ -59,6 +65,7 @@ nmap <A-S-j> <Action>(EditorCloneCaretBelow)
 
 "" Helix
 nmap <s-u> <Action>($Redo)
+vmap <s-u> <Action>($Redo)
 nmap <m-o> <Action>(EditorSelectWord)
 vmap <m-o> <Action>(EditorSelectWord)
 nmap <m-i> <Action>(EditorUnSelectWord)

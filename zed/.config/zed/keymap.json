@@ -4,7 +4,8 @@
     "bindings": {
       "shift shift": "file_finder::Toggle",
       "ctrl-´": "terminal_panel::ToggleFocus",
-      "ctrl-alt-¨": "workspace::NewTerminal"
+      "ctrl-alt-¨": "workspace::NewTerminal",
+      "cmd-t": "workspace::NewTerminal"
     }
   },
   {
@@ -28,14 +29,24 @@
     "context": "VimControl && !menu",
     "bindings": {
       "U": "vim::Redo",
+
       "alt-j": "editor::MoveLineDown",
       "alt-k": "editor::MoveLineUp",
+
       "shift-alt-j": "editor::AddSelectionBelow",
       "shift-alt-k": "editor::AddSelectionAbove",
+
+      "alt-h": "pane::GoBack",
+      "alt-l": "pane::GoForward",
+
       "alt-o": "editor::SelectLargerSyntaxNode",
       "alt-i": "editor::SelectSmallerSyntaxNode",
+      "tab": "editor::SelectLargerSyntaxNode",
+      "shift-tab": "editor::SelectSmallerSyntaxNode",
+
       "H": "vim::FirstNonWhitespace",
       "L": "vim::EndOfLine",
+
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
       "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
@@ -56,8 +67,9 @@
   {
     "context": "vim_mode == normal || vim_mode == visual",
     "bindings": {
-      "s": ["vim::PushOperator", { "Sneak": {} }]
-      // "S": ["vim::PushOperator", { "SneakBackward": {} }]
+      "enter": ["vim::PushOperator", { "Sneak": {} }],
+      "s": ["vim::PushOperator", { "Sneak": {} }],
+      "shift-enter": ["vim::PushOperator", { "SneakBackward": {} }]
     }
   }
 ]

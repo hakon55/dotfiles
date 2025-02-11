@@ -5,7 +5,17 @@
       "shift shift": "file_finder::Toggle",
       "ctrl-´": "terminal_panel::ToggleFocus",
       "ctrl-alt-¨": "workspace::NewTerminal",
-      "cmd-t": "workspace::NewTerminal"
+      "cmd-t": "workspace::NewTerminal",
+
+      "alt-1": "workspace::ToggleLeftDock",
+      "alt-2": "workspace::ToggleBottomDock",
+      "alt-3": "workspace::ToggleRightDock",
+
+      // TODO: Kommer resize for dock i senere utgave
+      "ctrl-shift-h": ["vim::ResizePane", "Narrow"],
+      "ctrl-shift-l": ["vim::ResizePane", "Widen"],
+      "ctrl-shift-j": ["vim::ResizePane", "Shorten"],
+      "ctrl-shift-k": ["vim::ResizePane", "Lengthen"]
     }
   },
   {
@@ -30,14 +40,15 @@
     "bindings": {
       "U": "vim::Redo",
 
+      "space space": "file_finder::Toggle",
+
       "alt-j": "editor::MoveLineDown",
       "alt-k": "editor::MoveLineUp",
+      "alt-h": "pane::GoBack",
+      "alt-l": "pane::GoForward",
 
       "shift-alt-j": "editor::AddSelectionBelow",
       "shift-alt-k": "editor::AddSelectionAbove",
-
-      "alt-h": "pane::GoBack",
-      "alt-l": "pane::GoForward",
 
       "alt-o": "editor::SelectLargerSyntaxNode",
       "alt-i": "editor::SelectSmallerSyntaxNode",
@@ -50,7 +61,15 @@
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
       "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+
+      "enter": ["vim::PushOperator", { "Sneak": {} }],
+      "shift-enter": ["vim::PushOperator", { "SneakBackward": {} }],
+
+      "ø": ["workspace::SendKeystrokes", "["],
+      "æ": ["workspace::SendKeystrokes", "]"],
+      "Ø": ["workspace::SendKeystrokes", "{"],
+      "Æ": ["workspace::SendKeystrokes", "}"]
     }
   },
   {
@@ -62,14 +81,6 @@
           "AddSurrounds": {}
         }
       ]
-    }
-  },
-  {
-    "context": "vim_mode == normal || vim_mode == visual",
-    "bindings": {
-      "enter": ["vim::PushOperator", { "Sneak": {} }],
-      "s": ["vim::PushOperator", { "Sneak": {} }],
-      "shift-enter": ["vim::PushOperator", { "SneakBackward": {} }]
     }
   }
 ]

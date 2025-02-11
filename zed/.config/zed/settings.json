@@ -13,13 +13,19 @@
   "features": {
     "inline_completion_provider": "copilot"
   },
-  "theme": "Gruvbox Dark",
+  "theme": "Gruvbox Dark Hard",
 
-  "autosave": "on_focus_change",
-  "tab_bar": { "show": false, "show_nav_history_buttons": true },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "tab_bar": {
+    "show": false
+  },
   "soft_wrap": "bounded",
   "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "buffer_font_size": 16.0,
   "scroll_beyond_last_line": "vertical_scroll_margin",
   "vertical_scroll_margin": 8,
 

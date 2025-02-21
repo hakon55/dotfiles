@@ -22,30 +22,36 @@ set which-key
 set timeoutlen=5000
 
 "" Mitt eget
-nmap gh 0
+nmap gs <Action>(FileStructurePopup)
 nmap cd <Action>(RenameElement)
-nmap gs ^
+nmap <C-S-k> <Action>(ResizeToolWindowUp)
+nmap <C-S-j> <Action>(ResizeToolWindowDown)
+nmap <C-S-h> <Action>(ResizeToolWindowRight)
+nmap <C-S-l> <Action>(ResizeToolWindowLeft)
 nmap H ^
-"" nmap gl $
-nmap L $
-nmap ge G
-xmap gh 0
-xmap gs ^
 xmap H ^
-"" xmap gl $
+nmap L $
 xmap L $
-xmap ge G
 omap H ^
 omap L $
+"nmap gh 0
+"nmap gs ^
+"nmap gl $
+"nmap ge G
+"xmap gh 0
+"xmap gs ^
+"xmap gl $
+"xmap ge G
 
 map <m-k> <Action>(MoveLineUp)
 map <m-j> <Action>(MoveLineDown)
 
-sadsada
-
 nmap <S-Esc> <Action>(HideAllWindows)
 map <Leader><Leader> <Action>(Switcher)
 
+nmap <Enter> <Action>(Floating.CodeToolbar.Extract)
+vmap <Enter> <Action>(Floating.CodeToolbar.Extract)
+nmap gh <Action>(ShowHoverInfo)
 nmap gl <Action>(SelectNextOccurrence)
 vmap gl <Action>(SelectNextOccurrence)
 nmap ga <Action>(SelectAllOccurrences)
@@ -58,7 +64,10 @@ nmap <C-k> <C-w>k
 
 nmap <C-w>q <Action>(CloseAllEditors)
 
-
+nmap ø [
+nmap Ø {
+nmap æ ]
+nmap Æ }
 
 nmap <A-S-k> <Action>(EditorCloneCaretAbove)
 nmap <A-S-j> <Action>(EditorCloneCaretBelow)
@@ -68,10 +77,17 @@ nmap <s-u> <Action>($Redo)
 vmap <s-u> <Action>($Redo)
 nmap <m-o> <Action>(EditorSelectWord)
 vmap <m-o> <Action>(EditorSelectWord)
+nmap <tab> <Action>(EditorSelectWord)
+vmap <tab> <Action>(EditorSelectWord)
+nmap <s-tab> <Action>(EditorUnSelectWord)
+vmap <s-tab> <Action>(EditorUnSelectWord)
 nmap <m-i> <Action>(EditorUnSelectWord)
 vmap <m-i> <Action>(EditorUnSelectWord)
+
 nmap <c-o> <Action>(Back)
 nmap <c-i> <Action>(Forward)
+nmap <M-h> <Action>(Back)
+nmap <M-l> <Action>(Forward)
 nmap <s-k> <Action>(ExpressionTypeInfo)
 
 "" Space mode
@@ -113,9 +129,11 @@ nmap <c-w>v <Action>(SplitVertically)
 nmap <c-w>s <Action>(SplitHorizontally)
 nmap <c-w>W <Action>(MoveEditorToOppositeTabGroup)
 nmap <c-w>w <Action>(NextWindow)
-nmap <c-w>q <Action>(CloseContent)
+nmap <c-w>q <Action>(CloseAllEditors)
 
 "" Unimpaired
+nmap ]] <Action>(GotoNextError)
+nmap [[ <Action>(GotoPreviousError)
 nmap ]d <Action>(GotoNextError)
 nmap [d <Action>(GotoPreviousError)
 nmap ]g <Action>(VcsShowNextChangeMarker)

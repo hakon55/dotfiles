@@ -1,34 +1,36 @@
 [
   {
-    "context": "Workspace",
     "bindings": {
-      "shift shift": "file_finder::Toggle",
-      "ctrl-´": "terminal_panel::ToggleFocus",
-      "ctrl-alt-¨": "workspace::NewTerminal",
-      "cmd-t": "workspace::NewTerminal",
-
-      "alt-1": "workspace::ToggleLeftDock",
-      "alt-2": "workspace::ToggleBottomDock",
-      "alt-3": "workspace::ToggleRightDock",
-
-      // TODO: Kommer resize for dock i senere utgave
-      "ctrl-shift-h": "vim::ResizePaneLeft",
-      "ctrl-shift-l": "vim::ResizePaneRight",
-      "ctrl-shift-j": "vim::ResizePaneDown",
-      "ctrl-shift-k": "vim::ResizePaneUp"
+      //   "ctrl-shift-w": "pane::CloseAllItems"
+      "ctrl-;": "zed::OpenKeymap"
     }
   },
   {
-    "context": "Editor && !menu",
-    "bindings": {}
-  },
-  {
-    "context": "Dock",
+    "context": "Workspace || Editor",
     "bindings": {
-      "ctrl-w h": "workspace::ActivatePaneLeft",
-      "ctrl-w l": "workspace::ActivatePaneRight",
-      "ctrl-w k": "workspace::ActivatePaneUp",
-      "ctrl-w j": "workspace::ActivatePaneDown",
+      "shift shift": "file_finder::Toggle",
+      "ctrl-shift-w": "pane::CloseAllItems",
+
+      "ctrl-1": "workspace::ToggleLeftDock",
+      "ctrl-2": "workspace::ToggleBottomDock",
+      "ctrl-3": "workspace::ToggleRightDock",
+
+      "ctrl-shift-h": "vim::ResizePaneLeft",
+      "ctrl-shift-l": "vim::ResizePaneRight",
+      "ctrl-shift-j": "vim::ResizePaneDown",
+      "ctrl-shift-k": "vim::ResizePaneUp",
+
+      "ctrl-shift-enter": "pane::SplitRight",
+
+      "ctrl-ae": "terminal_panel::ToggleFocus",
+      "ctrl-oslash": "terminal_panel::ToggleFocus",
+      "ctrl-shift-oslash": "workspace::NewTerminal",
+
+      "ctrl-s": "workspace::Save",
+      "ctrl-c": "editor::Copy", // vim default: return to normal mode,
+      "ctrl-v": "editor::Paste", // vim default: visual block mode,
+      "ctrl-w": ["pane::CloseActiveItem", { "close_pinned": false }],
+
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
@@ -36,16 +38,10 @@
     }
   },
   {
-    "context": "vim_mode == normal || vim_mode == visual",
-    "bindings": {
-      "s": ["vim::PushSneak", {}],
-      "S": ["vim::PushSneakBackward", {}]
-    }
-  },
-  {
     "context": "VimControl && !menu",
     "bindings": {
       "U": "vim::Redo",
+      "ctrl-r": "projects::OpenRecent",
 
       "space space": "file_finder::Toggle",
 
@@ -65,11 +61,6 @@
       "H": "vim::FirstNonWhitespace",
       "L": "vim::EndOfLine",
 
-      "ctrl-h": "workspace::ActivatePaneLeft",
-      "ctrl-l": "workspace::ActivatePaneRight",
-      "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown",
-
       "enter": ["vim::PushSneak", {}],
       "shift-enter": ["vim::PushSneakBackward", {}],
 
@@ -80,9 +71,17 @@
     }
   },
   {
+    "context": "vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      "s": ["vim::PushSneak", {}],
+      "S": ["vim::PushSneakBackward", {}]
+    }
+  },
+  {
     "context": "vim_mode == visual",
     "bindings": {
       "shift-s": ["vim::PushAddSurrounds", {}]
     }
   }
 ]
+

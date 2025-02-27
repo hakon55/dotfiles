@@ -26,22 +26,17 @@ nmap gs <Action>(FileStructurePopup)
 nmap cd <Action>(RenameElement)
 nmap <C-S-k> <Action>(ResizeToolWindowUp)
 nmap <C-S-j> <Action>(ResizeToolWindowDown)
-nmap <C-S-h> <Action>(ResizeToolWindowRight)
-nmap <C-S-l> <Action>(ResizeToolWindowLeft)
+nmap <C-S-h> <Action>(ResizeToolWindowLeft)
+nmap <C-S-l> <Action>(ResizeToolWindowRight)
+nmap <C-S-Enter> <Action>(SplitVertically)
+nmap <M-m> <Action>(MergeAllWindowsAction)
+nmap <C-r> <Action>(RecentProjectListGroup)
 nmap H ^
 xmap H ^
 nmap L $
 xmap L $
 omap H ^
 omap L $
-"nmap gh 0
-"nmap gs ^
-"nmap gl $
-"nmap ge G
-"xmap gh 0
-"xmap gs ^
-"xmap gl $
-"xmap ge G
 
 map <m-k> <Action>(MoveLineUp)
 map <m-j> <Action>(MoveLineDown)
@@ -62,12 +57,20 @@ nmap <C-l> <C-w>l
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 
-nmap <C-w>q <Action>(CloseAllEditors)
+nmap å <Action>(CloseEditor)
+nmap <S-å> <Action>(CloseAllEditors)
 
-nmap ø [
-nmap Ø {
-nmap æ ]
-nmap Æ }
+nmap <C-w>q <Action>(CloseAllEditors)
+nmap <C-S-w> <Action>(CloseAllEditors)
+
+" Dette funker ikke
+nmap <C-ø> <Action>(ActivateTerminalToolWindow)<CR>
+nmap <C-æ> <Action>(ActivateProjectToolWindow)
+
+map ø [
+map Ø {
+map æ ]
+map Æ }
 
 nmap <A-S-k> <Action>(EditorCloneCaretAbove)
 nmap <A-S-j> <Action>(EditorCloneCaretBelow)
@@ -134,6 +137,8 @@ nmap <c-w>q <Action>(CloseAllEditors)
 "" Unimpaired
 nmap ]] <Action>(GotoNextError)
 nmap [[ <Action>(GotoPreviousError)
+nmap ]æ <Action>(GotoNextError)
+nmap [ø <Action>(GotoPreviousError)
 nmap ]d <Action>(GotoNextError)
 nmap [d <Action>(GotoPreviousError)
 nmap ]g <Action>(VcsShowNextChangeMarker)

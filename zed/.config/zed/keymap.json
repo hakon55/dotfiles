@@ -1,19 +1,21 @@
 [
   {
     "bindings": {
-      //   "ctrl-shift-w": "pane::CloseAllItems"
-      "ctrl-;": "zed::OpenKeymap"
+      "ctrl-;": "zed::OpenKeymap",
+      "cmd-;": "zed::OpenKeymap"
     }
   },
   {
     "context": "Workspace || Editor",
     "bindings": {
       "shift shift": "file_finder::Toggle",
-      "ctrl-shift-w": "pane::CloseAllItems",
 
       "ctrl-1": "workspace::ToggleLeftDock",
       "ctrl-2": "workspace::ToggleBottomDock",
       "ctrl-3": "workspace::ToggleRightDock",
+      "cmd-1": "workspace::ToggleLeftDock",
+      "cmd-2": "workspace::ToggleBottomDock",
+      "cmd-3": "workspace::ToggleRightDock",
 
       "ctrl-shift-h": "vim::ResizePaneLeft",
       "ctrl-shift-l": "vim::ResizePaneRight",
@@ -21,15 +23,18 @@
       "ctrl-shift-k": "vim::ResizePaneUp",
 
       "ctrl-shift-enter": "pane::SplitRight",
+      "cmd-shift-enter": "pane::SplitRight",
 
-      "ctrl-ae": "terminal_panel::ToggleFocus",
+      "ctrl-ae": "project_panel::ToggleFocus",
+      "ctrl-æ": "project_panel::ToggleFocus",
       "ctrl-oslash": "terminal_panel::ToggleFocus",
+      "ctrl-ø": "terminal_panel::ToggleFocus",
       "ctrl-shift-oslash": "workspace::NewTerminal",
+      "ctrl-Ø": "workspace::NewTerminal",
 
       "ctrl-s": "workspace::Save",
       "ctrl-c": "editor::Copy", // vim default: return to normal mode,
       "ctrl-v": "editor::Paste", // vim default: visual block mode,
-      "ctrl-w": ["pane::CloseActiveItem", { "close_pinned": false }],
 
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
@@ -38,10 +43,23 @@
     }
   },
   {
+    "context": "Editor",
+    "bindings": {
+      "ø": ["workspace::SendKeystrokes", "["],
+      "æ": ["workspace::SendKeystrokes", "]"],
+      "Ø": ["workspace::SendKeystrokes", "{"],
+      "Æ": ["workspace::SendKeystrokes", "}"]
+    }
+  },
+  {
     "context": "VimControl && !menu",
     "bindings": {
       "U": "vim::Redo",
       "ctrl-r": "projects::OpenRecent",
+
+      "ctrl-w": ["pane::CloseActiveItem", { "close_pinned": false }],
+      "ctrl-shift-w": "pane::CloseAllItems",
+      "cmd-shift-w": "pane::CloseAllItems",
 
       "space space": "file_finder::Toggle",
 
@@ -62,12 +80,10 @@
       "L": "vim::EndOfLine",
 
       "enter": ["vim::PushSneak", {}],
-      "shift-enter": ["vim::PushSneakBackward", {}],
+      "shift-enter": ["vim::PushSneakBackward", {}]
 
-      "ø": ["workspace::SendKeystrokes", "["],
-      "æ": ["workspace::SendKeystrokes", "]"],
-      "Ø": ["workspace::SendKeystrokes", "{"],
-      "Æ": ["workspace::SendKeystrokes", "}"]
+      // "å": "pane::CloseActiveItem",
+      // "Å": "pane::CloseAllItems"
     }
   },
   {
@@ -84,4 +100,3 @@
     }
   }
 ]
-

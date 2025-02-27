@@ -32,10 +32,6 @@
       "ctrl-shift-oslash": "workspace::NewTerminal",
       "ctrl-Ø": "workspace::NewTerminal",
 
-      "ctrl-s": "workspace::Save",
-      "ctrl-c": "editor::Copy", // vim default: return to normal mode,
-      "ctrl-v": "editor::Paste", // vim default: visual block mode,
-
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
@@ -80,10 +76,16 @@
       "L": "vim::EndOfLine",
 
       "enter": ["vim::PushSneak", {}],
-      "shift-enter": ["vim::PushSneakBackward", {}]
+      "shift-enter": ["vim::PushSneakBackward", {}],
 
-      // "å": "pane::CloseActiveItem",
-      // "Å": "pane::CloseAllItems"
+      "ctrl-s": "workspace::Save",
+      "ctrl-a": "editor::SelectAll", // vim default: increment
+      "ctrl-x": "editor::Cut", // vim default: decrement
+      "ctrl-c": "editor::Copy", // vim default: return to normal mode,
+      "ctrl-v": "editor::Paste", // vim default: visual block mode,
+
+      "+": "vim::Increment",
+      "-": "vim::Decrement"
     }
   },
   {
@@ -100,3 +102,4 @@
     }
   }
 ]
+

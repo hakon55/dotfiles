@@ -44,12 +44,33 @@
       "ø": ["workspace::SendKeystrokes", "["],
       "æ": ["workspace::SendKeystrokes", "]"],
       "Ø": ["workspace::SendKeystrokes", "{"],
-      "Æ": ["workspace::SendKeystrokes", "}"]
+      "Æ": ["workspace::SendKeystrokes", "}"],
+
+      "ctrl-s": "workspace::Save",
+      "ctrl-a": "editor::SelectAll", // vim default: increment
+      "ctrl-x": "editor::Cut", // vim default: decrement
+      "ctrl-v": "editor::Paste" // vim default: visual block mode,
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "ctrl-ae": "workspace::ToggleLeftDock",
+      "ctrl-æ": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-oslash": "workspace::ToggleBottomDock",
+      "ctrl-ø": "workspace::ToggleBottomDock"
     }
   },
   {
     "context": "VimControl && !menu",
     "bindings": {
+      "ctrl-c": "editor::Copy", // vim default: return to normal mode,
+
       "U": "vim::Redo",
       "ctrl-r": "projects::OpenRecent",
 
@@ -77,12 +98,6 @@
 
       "enter": ["vim::PushSneak", {}],
       "shift-enter": ["vim::PushSneakBackward", {}],
-
-      "ctrl-s": "workspace::Save",
-      "ctrl-a": "editor::SelectAll", // vim default: increment
-      "ctrl-x": "editor::Cut", // vim default: decrement
-      "ctrl-c": "editor::Copy", // vim default: return to normal mode,
-      "ctrl-v": "editor::Paste", // vim default: visual block mode,
 
       "+": "vim::Increment",
       "-": "vim::Decrement"

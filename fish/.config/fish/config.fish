@@ -21,6 +21,7 @@ abbr gco git checkout
 set -g fish_key_bindings fish_hybrid_key_bindings
 
 set NVM_DIR ~/.nvm
+set USER m01345
 
 
 if status is-interactive

@@ -25,13 +25,6 @@
       "ctrl-shift-enter": "pane::SplitRight",
       "cmd-shift-enter": "pane::SplitRight",
 
-      "ctrl-ae": "project_panel::ToggleFocus",
-      "ctrl-æ": "project_panel::ToggleFocus",
-      "ctrl-oslash": "terminal_panel::ToggleFocus",
-      "ctrl-ø": "terminal_panel::ToggleFocus",
-      "ctrl-shift-oslash": "workspace::NewTerminal",
-      "ctrl-Ø": "workspace::NewTerminal",
-
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
@@ -46,12 +39,30 @@
       "Ø": ["workspace::SendKeystrokes", "{"],
       "Æ": ["workspace::SendKeystrokes", "}"],
 
+      "ctrl-ae": "project_panel::ToggleFocus",
+      "ctrl-æ": "project_panel::ToggleFocus",
+      "ctrl-oslash": "terminal_panel::ToggleFocus",
+      "ctrl-ø": "terminal_panel::ToggleFocus",
+      "ctrl-shift-oslash": "workspace::NewTerminal",
+      "ctrl-Ø": "workspace::NewTerminal",
+      "ctrl-å": "assistant::ToggleFocus",
+      "ctrl-ao": "assistant::ToggleFocus",
+
       "ctrl-s": "workspace::Save",
       "ctrl-a": "editor::SelectAll", // vim default: increment
       "ctrl-x": "editor::Cut", // vim default: decrement
       "ctrl-v": "editor::Paste" // vim default: visual block mode,
     }
   },
+  {
+    "context": "ContextEditor > Editor",
+    "bindings": {
+      "ctrl-å": "workspace::ToggleRightDock",
+      "ctrl-ao": "workspace::ToggleRightDock",
+      "enter": "assistant::Assist"
+    }
+  },
+
   {
     "context": "ProjectPanel",
     "bindings": {
@@ -117,4 +128,3 @@
     }
   }
 ]
-

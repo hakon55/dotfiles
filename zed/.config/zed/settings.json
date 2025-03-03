@@ -47,16 +47,16 @@
     "use_smartcase_find": true
   },
 
-  "assistant": {
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
-    },
-    "version": "2"
-  },
-
   "project_panel": {
     "auto_fold_dirs": true
+  },
+
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
+    },
+    "version": "2"
   },
 
   "terminal": {

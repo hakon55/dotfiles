@@ -19,11 +19,14 @@ set argtextobj
 set matchit
 set which-key
 
+set scrolloff=12
 set timeoutlen=5000
 
 "" Mitt eget
 nmap gs <Action>(FileStructurePopup)
 nmap cd <Action>(RenameElement)
+map s <Action>(flash.search)
+map <Return> <Action>(flash.search)
 nmap <C-S-k> <Action>(ResizeToolWindowUp)
 nmap <C-S-j> <Action>(ResizeToolWindowDown)
 nmap <C-S-h> <Action>(ResizeToolWindowLeft)
@@ -31,6 +34,7 @@ nmap <C-S-l> <Action>(ResizeToolWindowRight)
 nmap <C-S-Enter> <Action>(SplitVertically)
 nmap <M-m> <Action>(MergeAllWindowsAction)
 nmap <C-r> <Action>(RecentProjectListGroup)
+
 nmap H ^
 xmap H ^
 nmap L $
@@ -44,8 +48,8 @@ map <m-j> <Action>(MoveLineDown)
 nmap <S-Esc> <Action>(HideAllWindows)
 map <Leader><Leader> <Action>(Switcher)
 
-nmap <Enter> <Action>(Floating.CodeToolbar.Extract)
-vmap <Enter> <Action>(Floating.CodeToolbar.Extract)
+nmap <C-Enter> <Action>(Floating.CodeToolbar.Extract)
+vmap <C-Enter> <Action>(Floating.CodeToolbar.Extract)
 nmap gh <Action>(ShowHoverInfo)
 nmap gl <Action>(SelectNextOccurrence)
 vmap gl <Action>(SelectNextOccurrence)
@@ -57,20 +61,20 @@ nmap <C-l> <C-w>l
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 
-nmap å <Action>(CloseEditor)
-nmap <S-å> <Action>(CloseAllEditors)
-
 nmap <C-w>q <Action>(CloseAllEditors)
 nmap <C-S-w> <Action>(CloseAllEditors)
 
-" Dette funker ikke
-nmap <C-ø> <Action>(ActivateTerminalToolWindow)<CR>
-nmap <C-æ> <Action>(ActivateProjectToolWindow)
+nmap + <C-a>
+nmap - <C-x>
 
 map ø [
+imap ø [
 map Ø {
+imap Ø {
 map æ ]
+imap æ ]
 map Æ }
+imap Æ }
 
 nmap <A-S-k> <Action>(EditorCloneCaretAbove)
 nmap <A-S-j> <Action>(EditorCloneCaretBelow)

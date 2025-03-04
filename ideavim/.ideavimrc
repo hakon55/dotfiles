@@ -1,69 +1,21 @@
 " Must be done first to tell other plugins that this is the leader key
 let mapleader=" "
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-" https://github.com/JetBrains/ideavim/wiki/IdeaVim-Plugins
-" set clipboard+=unnamed
-" set clipboard+=ideaput
-"" set multiple-cursors
 set ideajoin
 set idearefactormode=keep
 set incsearch
-set sneak
-set showmode
 set hlsearch
+set sneak
 set surround
 set visualbell
 set commentary
 set highlightedyank
-set argtextobj
-set matchit
 set which-key
 
 set scrolloff=12
 set timeoutlen=5000
 
-"" Mitt eget
-nmap gs <Action>(FileStructurePopup)
-nmap cd <Action>(RenameElement)
-map s <Action>(flash.search)
-map <Return> <Action>(flash.search)
-nmap <C-S-k> <Action>(ResizeToolWindowUp)
-nmap <C-S-j> <Action>(ResizeToolWindowDown)
-nmap <C-S-h> <Action>(ResizeToolWindowLeft)
-nmap <C-S-l> <Action>(ResizeToolWindowRight)
-nmap <C-S-Enter> <Action>(SplitVertically)
-nmap <M-m> <Action>(MergeAllWindowsAction)
-nmap <C-r> <Action>(RecentProjectListGroup)
-
-nmap H ^
-xmap H ^
-nmap L $
-xmap L $
-omap H ^
-omap L $
-
-map <m-k> <Action>(MoveLineUp)
-map <m-j> <Action>(MoveLineDown)
-
-nmap <S-Esc> <Action>(HideAllWindows)
-map <Leader><Leader> <Action>(Switcher)
-
-nmap <C-Enter> <Action>(Floating.CodeToolbar.Extract)
-vmap <C-Enter> <Action>(Floating.CodeToolbar.Extract)
-nmap gh <Action>(ShowHoverInfo)
-nmap gl <Action>(SelectNextOccurrence)
-vmap gl <Action>(SelectNextOccurrence)
-nmap ga <Action>(SelectAllOccurrences)
-nmap g. <Action>(ShowIntentionActions)
-
-nmap <C-h> <C-w>h
-nmap <C-l> <C-w>l
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-
-nmap <C-w>q <Action>(CloseAllEditors)
-nmap <C-S-w> <Action>(CloseAllEditors)
-
+"" Enkle remaps
 nmap + <C-a>
 nmap - <C-x>
 
@@ -76,12 +28,43 @@ imap æ ]
 map Æ }
 imap Æ }
 
+nmap H ^
+xmap H ^
+nmap L $
+xmap L $
+omap H ^
+omap L $
+
+nmap <s-u> <Action>($Redo)
+vmap <s-u> <Action>($Redo)
+
+"" Intellij Actions
+nmap gs <Action>(FileStructurePopup)
+nmap cd <Action>(RenameElement)
+nmap <C-r> <Action>(RecentProjectListGroup)
+nmap <M-m> <Action>(MergeAllWindowsAction)
+nmap <S-Esc> <Action>(HideAllWindows)
+map <Leader><Leader> <Action>(Switcher)
+
+map <m-k> <Action>(MoveLineUp)
+map <m-j> <Action>(MoveLineDown)
 nmap <A-S-k> <Action>(EditorCloneCaretAbove)
 nmap <A-S-j> <Action>(EditorCloneCaretBelow)
 
-"" Helix
-nmap <s-u> <Action>($Redo)
-vmap <s-u> <Action>($Redo)
+nmap <C-Enter> <Action>(Floating.CodeToolbar.Extract)
+vmap <C-Enter> <Action>(Floating.CodeToolbar.Extract)
+
+nmap <s-k> <Action>(ExpressionTypeInfo)
+nmap gh <Action>(ShowHoverInfo)
+nmap g. <Action>(ShowIntentionActions)
+
+nmap gl <Action>(SelectNextOccurrence)
+vmap gl <Action>(SelectNextOccurrence)
+nmap ga <Action>(SelectAllOccurrences)
+
+nmap <C-w>q <Action>(CloseAllEditors)
+nmap <C-S-w> <Action>(CloseAllEditors)
+
 nmap <m-o> <Action>(EditorSelectWord)
 vmap <m-o> <Action>(EditorSelectWord)
 nmap <tab> <Action>(EditorSelectWord)
@@ -91,11 +74,25 @@ vmap <s-tab> <Action>(EditorUnSelectWord)
 nmap <m-i> <Action>(EditorUnSelectWord)
 vmap <m-i> <Action>(EditorUnSelectWord)
 
+
+"" Vinduer og navigering
+nmap <C-S-Enter> <Action>(SplitVertically)
+nmap <C-S-k> <Action>(ResizeToolWindowUp)
+nmap <C-S-j> <Action>(ResizeToolWindowDown)
+nmap <C-S-h> <Action>(ResizeToolWindowLeft)
+nmap <C-S-l> <Action>(ResizeToolWindowRight)
+nmap <C-h> <C-w>h
+nmap <C-l> <C-w>l
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+
+map s <Action>(flash.search)
+map <Return> <Action>(flash.search)
+
 nmap <c-o> <Action>(Back)
 nmap <c-i> <Action>(Forward)
 nmap <M-h> <Action>(Back)
 nmap <M-l> <Action>(Forward)
-nmap <s-k> <Action>(ExpressionTypeInfo)
 
 "" Space mode
 nmap <leader>r <Action>(RenameElement)

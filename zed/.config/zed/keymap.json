@@ -59,7 +59,9 @@
     "bindings": {
       "ctrl-å": "workspace::ToggleRightDock",
       "ctrl-ao": "workspace::ToggleRightDock",
-      "enter": "assistant::Assist"
+      "enter": "assistant::Assist",
+      "shift-enter": "editor::Newline",
+      "alt-enter": "assistant::Split"
     }
   },
 

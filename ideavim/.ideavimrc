@@ -15,29 +15,6 @@ set which-key
 set scrolloff=12
 set timeoutlen=5000
 
-"" Enkle remaps
-nmap + <C-a>
-nmap - <C-x>
-
-map ø [
-imap ø [
-map Ø {
-imap Ø {
-map æ ]
-imap æ ]
-map Æ }
-imap Æ }
-
-nmap H ^
-xmap H ^
-nmap L $
-xmap L $
-omap H ^
-omap L $
-
-nmap <s-u> <Action>($Redo)
-vmap <s-u> <Action>($Redo)
-
 "" Intellij Actions
 nmap gs <Action>(FileStructurePopup)
 nmap cd <Action>(RenameElement)
@@ -94,7 +71,30 @@ nmap <c-i> <Action>(Forward)
 nmap <M-h> <Action>(Back)
 nmap <M-l> <Action>(Forward)
 
-"" Space mode
+"" Enkle remaps
+nmap + <C-a>
+nmap - <C-x>
+
+map ø [
+imap ø [
+map Ø {
+imap Ø {
+map æ ]
+imap æ ]
+map Æ }
+imap Æ }
+
+nmap H ^
+xmap H ^
+nmap L $
+xmap L $
+omap H ^
+omap L $
+
+nmap <s-u> <Action>($Redo)
+vmap <s-u> <Action>($Redo)
+
+"" Space mode (mye fre Helix)
 nmap <leader>r <Action>(RenameElement)
 nmap <leader>j <Action>(RecentLocations)
 vmap <leader>y "+y

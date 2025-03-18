@@ -9,6 +9,8 @@ fish_add_path /Users/m01345/bin
 
 abbr dc docker compose
 
+abbr zed flatpak run dev.zed.Zed
+
 abbr g git
 abbr ga git add 
 abbr gs git status
@@ -22,7 +24,6 @@ set -g fish_key_bindings fish_hybrid_key_bindings
 
 set NVM_DIR ~/.nvm
 set USER m01345
-
 
 if status is-interactive
     # Commands to run in interactive sessions can go here

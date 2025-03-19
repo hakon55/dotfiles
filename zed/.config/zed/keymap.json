@@ -34,6 +34,8 @@
   {
     "context": "Editor",
     "bindings": {
+      "å": ["workspace::SendKeystrokes", "("],
+      "Å": ["workspace::SendKeystrokes", ")"],
       "ø": ["workspace::SendKeystrokes", "["],
       "æ": ["workspace::SendKeystrokes", "]"],
       "Ø": ["workspace::SendKeystrokes", "{"],
@@ -46,19 +48,14 @@
       "ctrl-shift-oslash": "workspace::NewTerminal",
       "ctrl-Ø": "workspace::NewTerminal",
       "ctrl-å": "assistant::ToggleFocus",
-      "ctrl-ao": "assistant::ToggleFocus",
-
-      "ctrl-s": "workspace::Save",
-      "ctrl-a": "editor::SelectAll", // vim default: increment
-      "ctrl-x": "editor::Cut", // vim default: decrement
-      "ctrl-v": "editor::Paste" // vim default: visual block mode,
+      "ctrl-aring": "assistant::ToggleFocus"
     }
   },
   {
     "context": "ContextEditor > Editor",
     "bindings": {
       "ctrl-å": "workspace::ToggleRightDock",
-      "ctrl-ao": "workspace::ToggleRightDock",
+      "ctrl-aring": "workspace::ToggleRightDock",
       "enter": "assistant::Assist",
       "shift-enter": "editor::Newline",
       "alt-enter": "assistant::Split"
@@ -83,6 +80,10 @@
     "context": "VimControl && !menu",
     "bindings": {
       "ctrl-c": "editor::Copy", // vim default: return to normal mode,
+      "ctrl-s": "workspace::Save",
+      "ctrl-a": "editor::SelectAll", // vim default: increment
+      "ctrl-x": "editor::Cut", // vim default: decrement
+      "ctrl-v": "editor::Paste", // vim default: visual block mode,
 
       "U": "vim::Redo",
       "ctrl-r": "projects::OpenRecent",
@@ -117,6 +118,17 @@
     }
   },
   {
+    "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
+    "bindings": {
+      "å": "vim::Parentheses",
+      "Å": "vim::Parentheses",
+      "ø": "vim::SquareBrackets",
+      "æ": "vim::SquareBrackets",
+      "Ø": "vim::CurlyBrackets",
+      "Æ": "vim::CurlyBrackets"
+    }
+  },
+  {
     "context": "vim_mode == normal || vim_mode == visual",
     "bindings": {
       "s": ["vim::PushSneak", {}],
@@ -130,3 +142,4 @@
     }
   }
 ]
+

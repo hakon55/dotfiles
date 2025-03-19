@@ -8,7 +8,7 @@
   "features": {
     "edit_prediction_provider": "copilot"
   },
-  "theme": "Gruvbox Dark Hard",
+  "theme": "One Dark",
 
   "autosave": {
     "after_delay": {
@@ -27,14 +27,18 @@
   "languages": {
     "TypeScript": {
       "code_actions_on_format": {
-        "source.organizeImports": true
+        "source.organizeImports": true,
+        "source.addMissingImports": true,
+        "source.sortImports": true,
+        "source.fixAll.eslint": true
       }
     },
     "TSX": {
       "code_actions_on_format": {
         "source.organizeImports": true,
         "source.addMissingImports": true,
-        "source.sortImports": true
+        "source.sortImports": true,
+        "source.fixAll.eslint": true
       }
     }
   },
@@ -63,6 +67,9 @@
     "dock": "bottom",
     "font_family": "FiraCode Nerd Font Mono",
     "copy_on_select": true,
+    "shell": {
+      "program": "fish"
+    },
     "env": {
       "EDITOR": "zed --wait"
     }

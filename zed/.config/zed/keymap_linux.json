@@ -1,0 +1,99 @@
+[
+  {
+    "bindings": {
+      "ctrl-;": "zed::OpenKeymap",
+      "cmd-;": "zed::OpenKeymap",
+
+      "ctrl-oslash": "workspace::ToggleLeftDock",
+      "ctrl-ae": "workspace::ToggleBottomDock",
+      "ctrl-aring": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "Workspace || Editor",
+    "bindings": {
+      "shift shift": "file_finder::Toggle",
+      "ctrl ctrl": "task::Spawn",
+
+      "ctrl-shift-h": "vim::ResizePaneLeft",
+      "ctrl-shift-l": "vim::ResizePaneRight",
+      "ctrl-shift-j": "vim::ResizePaneDown",
+      "ctrl-shift-k": "vim::ResizePaneUp",
+
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+
+      "oslash": ["workspace::SendKeystrokes", "["],
+      "ae": ["workspace::SendKeystrokes", "]"],
+      "shift-oslash": ["workspace::SendKeystrokes", "{"],
+      "shift-ae": ["workspace::SendKeystrokes", "}"],
+      "alt-oslash": ["workspace::SendKeystrokes", "ø"],
+      "alt-shift-oring": ["workspace::SendKeystrokes", "Ø"],
+      "alt-ae": ["workspace::SendKeystrokes", "æ"],
+      "alt-shift-ae": ["workspace::SendKeystrokes", "Æ"]
+    }
+  },
+  {
+    "context": "Dock",
+    "bindings": {
+      "ctrl-w h": "workspace::ActivatePaneLeft",
+      "ctrl-w l": "workspace::ActivatePaneRight",
+      "ctrl-w k": "workspace::ActivatePaneUp",
+      "ctrl-w j": "workspace::ActivatePaneDown"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "ctrl-c": "editor::Copy", // vim default: return to normal mode,
+      "ctrl-s": "workspace::Save",
+      "ctrl-a": "editor::SelectAll", // vim default: increment
+      "ctrl-x": "editor::Cut", // vim default: decrement
+      "ctrl-v": "editor::Paste", // vim default: visual block mode,
+      "ctrl-r": "projects::OpenRecent",
+      "ctrl-f": "vim::Search",
+      "ctrl-alt-b": "workspace::ToggleRightDock",
+      "ctrl-j": "workspace::ToggleBottomDock",
+      "ctrl-b": "workspace::ToggleLeftDock",
+      "ctrl-alt-y": "workspace::CloseAllDocks",
+
+      "U": "vim::Redo",
+      "H": "vim::FirstNonWhitespace",
+      "L": "vim::EndOfLine",
+      "+": "vim::Increment",
+      "-": "vim::Decrement",
+
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
+      "shift-alt-j": "editor::AddSelectionBelow",
+      "shift-alt-k": "editor::AddSelectionAbove",
+      "alt-h": "pane::ActivatePreviousItem",
+      "alt-l": "pane::ActivateNextItem",
+
+      "tab": "editor::SelectLargerSyntaxNode",
+      "shift-tab": "editor::SelectSmallerSyntaxNode"
+    }
+  },
+  {
+    "context": "vim_mode == operator",
+    "bindings": {
+      "ø": "vim::SquareBrackets",
+      "æ": "vim::SquareBrackets",
+      "Ø": "vim::CurlyBrackets",
+      "Æ": "vim::CurlyBrackets"
+    }
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      "s": ["vim::PushSneak", {}],
+      "S": ["vim::PushSneakBackward", {}]
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-s": ["vim::PushAddSurrounds", {}]
+    }
+  }
+]

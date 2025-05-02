@@ -11,6 +11,7 @@
       "shift shift": "file_finder::Toggle",
       "ctrl ctrl": "task::Spawn",
       "alt-o": "workspace::Open",
+      "alt-d": ["editor::SelectNext", { "replace_newest": false }], 
 
       "ctrl-shift-h": "workspace::ActivatePaneLeft",
       "ctrl-shift-l": "workspace::ActivatePaneRight",
@@ -51,9 +52,10 @@
       "ctrl-v": "editor::Paste", // vim default: visual block mode,
       "ctrl-r": "projects::OpenRecent",
       "ctrl-f": "vim::Search",
-      "ctrl-alt-b": "workspace::ToggleRightDock",
-      "ctrl-j": "workspace::ToggleBottomDock",
+      
       "ctrl-b": "workspace::ToggleLeftDock",
+      "ctrl-j": "workspace::ToggleBottomDock",
+      "ctrl-alt-b": "workspace::ToggleRightDock",
       "ctrl-alt-y": "workspace::CloseAllDocks",
 
       "U": "vim::Redo",

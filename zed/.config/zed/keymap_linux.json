@@ -1,27 +1,26 @@
 [
   {
     "bindings": {
-      "ctrl-;": "zed::OpenKeymap",
-      "cmd-;": "zed::OpenKeymap",
-
-      "ctrl-oslash": "workspace::ToggleLeftDock",
-      "ctrl-ae": "workspace::ToggleBottomDock",
-      "ctrl-aring": "workspace::ToggleRightDock"
+      "ctrl-shift-w": "pane::CloseActiveItem"
     }
   },
   {
     "context": "Workspace || Editor",
     "bindings": {
+      "ctrl-;": "zed::OpenKeymap",
       "shift shift": "file_finder::Toggle",
       "ctrl ctrl": "task::Spawn",
+      "alt-o": "workspace::Open",
 
-      "ctrl-shift-h": "vim::ResizePaneLeft",
-      "ctrl-shift-l": "vim::ResizePaneRight",
-      "ctrl-shift-j": "vim::ResizePaneDown",
-      "ctrl-shift-k": "vim::ResizePaneUp",
+      "ctrl-shift-h": "workspace::ActivatePaneLeft",
+      "ctrl-shift-l": "workspace::ActivatePaneRight",
+      "ctrl-shift-j": "workspace::ActivatePaneDown",
+      "ctrl-shift-k": "workspace::ActivatePaneUp",
 
-      "ctrl-h": "workspace::ActivatePaneLeft",
-      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-shift-alt-h": "vim::ResizePaneLeft",
+      "ctrl-shift-alt-l": "vim::ResizePaneRight",
+      "ctrl-shift-alt-j": "vim::ResizePaneDown",
+      "ctrl-shift-alt-k": "vim::ResizePaneUp",
 
       "oslash": ["workspace::SendKeystrokes", "["],
       "ae": ["workspace::SendKeystrokes", "]"],

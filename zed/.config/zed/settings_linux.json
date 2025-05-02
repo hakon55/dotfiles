@@ -2,9 +2,15 @@
 // documentation: https://zed.dev/docs/configuring-zed
 {
   // "base_keymap": "JetBrains",
-  "collaboration_panel": {
-    "dock": "right"
+  "edit_predictions": {
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_assistant": false
   },
+
   "theme": "One Dark",
 
   "autosave": {
@@ -12,10 +18,6 @@
       "milliseconds": 1000
     }
   },
-  "tab_bar": {
-    "show": false
-  },
-
   "soft_wrap": "bounded",
   "ui_font_size": 16,
   "buffer_font_size": 17.0,
@@ -32,21 +34,15 @@
     "use_smartcase_find": true
   },
 
-  "project_panel": {
-    "auto_fold_dirs": true
+  "collaboration_panel": {
+    "dock": "right"
   },
 
-  "assistant": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
-    },
-    "version": "2"
+  "project_panel": {
+    "auto_reveal_entries": false
   },
 
   "terminal": {
-    // "dock": "bottom",
-    "font_family": "FiraCode Nerd Font Mono",
     "copy_on_select": true,
     "shell": {
       "program": "fish"

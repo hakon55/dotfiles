@@ -75,14 +75,14 @@ nmap <M-l> <Action>(Forward)
 nmap + <C-a>
 nmap - <C-x>
 
-map ø [
-imap ø [
-map Ø {
-imap Ø {
-map æ ]
-imap æ ]
-map Æ }
-imap Æ }
+" map ø [
+" imap ø [
+" map Ø {
+" imap Ø {
+" map æ ]
+" imap æ ]
+" map Æ }
+" imap Æ }
 
 nmap H ^
 xmap H ^
@@ -109,6 +109,7 @@ nmap <leader>s <Action>(FileStructurePopup)
 nmap <leader>F <Action>(FindInPath)
 nmap <leader>f <Action>(GotoFile)
 nmap <leader>e <Action>(ActivateProjectToolWindow)
+nmap <leader>r <Action>(SelectIn)
 nmap <leader>a <Action>(ShowIntentionActions)
 nmap <leader>g <Action>(EditorPopupMenu.GoTo)
 nmap <leader>b <Action>(RecentChangedFiles)

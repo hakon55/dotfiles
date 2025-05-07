@@ -56,9 +56,6 @@
     "bindings": {
       "ctrl-å": "workspace::ToggleRightDock",
       "ctrl-aring": "workspace::ToggleRightDock",
-      "enter": "assistant::Assist",
-      "shift-enter": "editor::Newline",
-      "alt-enter": "assistant::Split"
     }
   },
 
@@ -87,8 +84,9 @@
 
       "U": "vim::Redo",
       "ctrl-r": "projects::OpenRecent",
+      "alt-tab": "editor::ShowEditPrediction", // zed specific
 
-      "ctrl-w": ["pane::CloseActiveItem", { "close_pinned": false }],
+      // "ctrl-w": ["pane::CloseActiveItem", { "close_pinned": false }],
       "ctrl-shift-w": "pane::CloseAllItems",
       "cmd-shift-w": "pane::CloseAllItems",
 
@@ -142,4 +140,3 @@
     }
   }
 ]
-

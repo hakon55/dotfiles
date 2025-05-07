@@ -6,6 +6,7 @@ fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/opt/node@22/bin
 fish_add_path /Users/hakon.stordal/bin
 fish_add_path "/Users/hakon.stordal/Library/Application Support/JetBrains/Toolbox/scripts"
+fish_add_path ~/scripts
 
 abbr dc docker compose
 

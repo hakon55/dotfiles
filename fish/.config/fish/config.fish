@@ -21,6 +21,7 @@ abbr gc git commit
 abbr gco git checkout
 
 set -g fish_key_bindings fish_hybrid_key_bindings
+# set -g fish_key_bindings fish_vi_key_bindings
 
 bind -M insert ctrl-n down-or-search
 

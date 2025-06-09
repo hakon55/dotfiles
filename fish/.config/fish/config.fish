@@ -22,6 +22,8 @@ abbr gco git checkout
 
 set -g fish_key_bindings fish_hybrid_key_bindings
 
+bind -M insert ctrl-n down-or-search
+
 set NVM_DIR ~/.nvm
 #set USER m01345
 
